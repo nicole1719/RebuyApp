@@ -1,0 +1,30 @@
+.card {
+    width: 18rem;
+    &:hover {
+        transform: scale(1.01);
+    }
+}
+
+.btn {
+    color: white;
+}
+
+.card-title {
+    min-height: 3rem;
+}
+
+.card-text {
+    min-height: 2rem;
+}
+
+.card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

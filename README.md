@@ -54,6 +54,29 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Technical Decisions
+
+**Mock Data** <br>
+I worked with mock data to simulate a backend functionality, because no API was provided. This allowed faster implementation which meets the MVP requirements.
+
+**Responsive Design** <br>
+To implement responsive design, I used Bootstrap's grid system and classes. Furthermore, I used ARIA attributes for improved accessibility.
+
+**Local Storage** <br>
+To keep the data even after refreshing the page, I used local storage.
+I also used local storage to keep track of the offers a user has already voted on to prevent multiple upvoting/downvoting on one offer.
+
+**Offer Service** <br>
+My offer service provides the logic needed to get, save data and change the votes. I used a ```BehaviorSubject``` to manage the offers reactively. All subscribed components automatically receive updates when the data changes.
+API calls can be easily integrated into the service.
+Once this happens, ```BehaviorSubject``` will also prevent redundant API calls. 
+
+**Redirect to Existent Page** <br>
+One of the requirements was to enable the user to purchase an offer from the existent platform.
+For this, I simply redirect the user to the existent page using the ID of the offer.
+
+
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons";
+@import "custom.scss";
+
+header {
+    background-color: #64c2c8;
+    color: white;
+    height: 2rem;
+}
+
+.bi {
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-text-stroke: 1px;
+    padding: 5px;
+
+    &:hover {
+        color: #64c2c8;
+    }
+
+}
