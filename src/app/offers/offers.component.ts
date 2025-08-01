@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { OfferService } from '../services/offer-service';
 import { RouterModule } from '@angular/router';
 import * as bootstrap from 'bootstrap';
@@ -10,7 +10,7 @@ import * as bootstrap from 'bootstrap';
   styleUrl: './offers.component.scss'
 })
 export class OffersComponent implements OnInit {
-  constructor(private offerService: OfferService) {
+  constructor(private offerService: OfferService, private cdr: ChangeDetectorRef) {
   }
   offers: Offer[] = []
   openedOffer?: Offer;
@@ -55,6 +55,7 @@ export class OffersComponent implements OnInit {
       console.error('could not find offer with given ID: ', id)
       return;
     }
+    this.cdr.detectChanges();
     this.modal?.show();
   }
 
