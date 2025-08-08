@@ -2,7 +2,7 @@
     <div class="row">
         <!-- card for displaying data for each offer -->
         @for(offer of offers; track offer.id) {
-        <div class="col h-100">
+        <div class="col h-100 block">
             <div class="card m-2 h-100">
                 <img [src]="offer.imageUrl" class="card-img-top" alt="Product image">
                 <div class="card-body">
